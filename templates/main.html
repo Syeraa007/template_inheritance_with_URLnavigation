@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Main page</title>
+    {% endblock%}
+    <!-- <link rel="stylesheet" href="{% static 'css/all.css' %}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+</head>
+<body>
+    <!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color">
+    <a class="navbar-brand" href="{% url 'admin:index' %}">Admin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+      aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}" target="_blank">
+                    <i class="fab fa-instagram"> Home </i> 
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'registration' %}" target="_blank">
+                    <i class="fab fa-instagram"> Registration </i>  
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}" target="_blank">
+                    <i class="fab fa-instagram"> Login </i>  
+                </a>
+            </li>
+        </ul>         
+    </div>
+</nav>
+    <!--/Navbar -->
+
+<!-- Script -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+
+{% block body_block %}
+
+{% endblock %}
+
+</body>
+</html>
